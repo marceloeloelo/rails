@@ -118,7 +118,7 @@ module ActiveRecord
     end
 
     def current_time_from_proper_timezone
-      self.class.default_timezone == :utc ? Time.now.utc : Time.now
+      self.class.default_timezone == :utc ? Time.now.utc : DateTime.current
     end
 
     # Clear attributes and changed_attributes
